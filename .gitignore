@@ -72,3 +72,15 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+*.dwlt
+
+*.log
+
+*.bakert
+
+Temp/UnityLockfile
+
+*.backup
+
+*.log
