@@ -1,14 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &101768
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1461859456691996}
+  m_IsPrefabParent: 1
+--- !u!1 &1461859456691996
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 401768}
-  - component: {fileID: 11401768}
+  - component: {fileID: 4860953471689788}
+  - component: {fileID: 114538074492688864}
   m_Layer: 4
   m_Name: Ocean
   m_TagString: Ocean
@@ -16,12 +27,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &401768
+--- !u!4 &4860953471689788
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101768}
+  m_GameObject: {fileID: 1461859456691996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -176.5, y: -343, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -29,12 +40,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &11401768
+--- !u!114 &114538074492688864
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 101768}
+  m_GameObject: {fileID: 1461859456691996}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c154aa817ceb43048bc1710ca3a095af, type: 3}
@@ -83,14 +94,3 @@ MonoBehaviour:
   mistClouds: {fileID: 160538, guid: dfda8c2389014254a9760829880e1399, type: 2}
   mistEnabled: 0
   waterInteractionEffects: 0
---- !u!1001 &100100000
-Prefab:
-  m_ObjectHideFlags: 1
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications: []
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 101768}
-  m_IsPrefabParent: 1
