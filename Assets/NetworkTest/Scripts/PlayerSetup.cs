@@ -19,8 +19,8 @@ public class PlayerSetup : NetworkBehaviour {
 			DisableComponents ();
 			AssignRemoteLayer ();
 		} else {
-			//if (Camera.main != null)
-			//	Camera.main.gameObject.SetActive (false);
+			if (Camera.main != null)
+				Camera.main.gameObject.SetActive (false);
 			GetComponent<Player> ().Setup ();
 			if (playerUIPrefab != null) {
 				playerUIInstance = Instantiate (playerUIPrefab);
