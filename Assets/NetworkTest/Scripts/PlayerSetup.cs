@@ -11,6 +11,7 @@ public class PlayerSetup : NetworkBehaviour {
 
 	[SerializeField]
 	GameObject playerUIPrefab;
+
 	GameObject mainCam;
 	private GameObject playerUIInstance;
 

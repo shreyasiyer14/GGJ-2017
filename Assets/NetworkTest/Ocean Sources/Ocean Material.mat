@@ -148,7 +148,7 @@ Material:
       second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _WaveOffset
-      second: {r: -73.8072, g: -73.8072, b: -73.8072, a: -73.8072}
+      second: {r: -93.938095, g: -93.938095, b: -93.938095, a: -93.938095}
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6

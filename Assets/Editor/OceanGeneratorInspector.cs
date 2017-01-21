@@ -84,8 +84,6 @@ public class OceanGeneratorInspector : Editor
 
 	    DrawSeparator();
 
-		DrawVerticalSeparator();
-
 		EditorGUILayout.BeginHorizontal();
 		GUILayout.FlexibleSpace();
 		EditorGUILayout.BeginVertical();
@@ -127,20 +125,18 @@ public class OceanGeneratorInspector : Editor
 		    EditorGUILayout.LabelField("Scale");
 			ocean.scale = (float)EditorGUILayout.Slider(ocean.scale, 0, 100);
 		
-		    EditorGUILayout.LabelField("Choppy scale");
-		ocean.choppy_scale = (float)EditorGUILayout.Slider(ocean.choppy_scale, 0, 100);
+		    //EditorGUILayout.LabelField("Choppy scale");
+		//ocean.choppy_scale = (float)EditorGUILayout.Slider(ocean.choppy_scale, 0, 100);
 		
 		    EditorGUILayout.LabelField("Waves speed");
 			ocean.speed = (float)EditorGUILayout.Slider(ocean.speed, 0.1f, 3f);
 
-		    EditorGUILayout.LabelField("Waves Offset animation speed");
-		    ocean.waveSpeed = (float)EditorGUILayout.Slider(ocean.waveSpeed, 0.1f, 10f);
+		 //   EditorGUILayout.LabelField("Waves Offset animation speed");
+		 //   ocean.waveSpeed = (float)EditorGUILayout.Slider(ocean.waveSpeed, 0.1f, 10f);
 		
 		    EditorGUILayout.LabelField("Wake distance");
 			ocean.wakeDistance = (float)EditorGUILayout.Slider(ocean.wakeDistance, 1f, 15f);
-		
-		DrawSeparator(); 
-		 
+				 /*
 		    EditorGUI.DropShadowLabel(EditorGUILayout.BeginVertical(), "Mist");
 		    GUILayout.Space(16);
 		    EditorGUILayout.EndVertical();
@@ -166,17 +162,17 @@ public class OceanGeneratorInspector : Editor
 		    EditorGUILayout.EndHorizontal();
 
 		DrawSeparator();
-
+		*/
 		    EditorGUI.DropShadowLabel(EditorGUILayout.BeginVertical(), "Wind");
 		    GUILayout.Space(16);
 		    EditorGUILayout.EndVertical();
-		
+		/*
 		    EditorGUILayout.BeginHorizontal();
 		    EditorGUILayout.LabelField("Dynamic waves");
 
 		    ocean.dynamicWaves = EditorGUILayout.Toggle(ocean.dynamicWaves);
 		    EditorGUILayout.EndHorizontal();
-		
+		*/
 		    EditorGUILayout.LabelField("Wind power");
 		    ocean.humidity = (float)EditorGUILayout.Slider(ocean.humidity, 0.01f, 1f);
 		
@@ -190,15 +186,8 @@ public class OceanGeneratorInspector : Editor
 		    ocean.pWindy = EditorGUILayout.FloatField(ocean.pWindy);
 		    EditorGUILayout.EndHorizontal();
 
-			GUILayout.Space(25);
-		    EditorGUILayout.BeginHorizontal();
-		    EditorGUILayout.LabelField("Spread along frames");
-
-		    ocean.spreadAlongFrames = EditorGUILayout.Toggle(ocean.spreadAlongFrames);
-		    EditorGUILayout.EndHorizontal();
-
-
 		EditorGUILayout.EndVertical();
+
 		GUILayout.FlexibleSpace();
 		GUILayout.Space(20);
 		GUILayout.FlexibleSpace();

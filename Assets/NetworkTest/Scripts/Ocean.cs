@@ -162,7 +162,6 @@ public class Ocean : MonoBehaviour
 	private float nextValue = 0.4f;
 	private float prevTime = 1;
 	private const float timeFreq = 1f/ 280f;
-
 	public GameObject mist;
 	public GameObject mistLow;
 	public GameObject mistClouds;
@@ -210,11 +209,12 @@ public class Ocean : MonoBehaviour
 		
 		return Mathf.Lerp(prevOffsetValue, nextOffsetValue, frac);
 	}
-
+	/*
 	IEnumerator AddMist () {
 		while(true){
 			if(player != null && mistEnabled){
 				Vector3 pos = new Vector3(player.transform.position.x + Random.Range(-30, 30), player.transform.position.y + 5, player.transform.position.z + Random.Range(-30, 30));
+
 				if(wind >= 0.7f){
                     if (mistClouds != null && mist != null)
                     {
@@ -236,12 +236,13 @@ public class Ocean : MonoBehaviour
 					mistParticles.transform.parent = transform;
 					yield return new WaitForSeconds(1f);
 				}
+
 			}
 			yield return new WaitForSeconds(0.5f);
 			
 		}
 	}
-	
+	*/
 	public void SetWaves (float wind) {
 		waveScale = Mathf.Lerp(0, scale, wind);
     }
@@ -406,7 +407,7 @@ public class Ocean : MonoBehaviour
 		InitWaveGenerator();
 		UpdateWaterColor ();
 		GenerateHeightmap ();
-		StartCoroutine(AddMist());
+//		StartCoroutine(AddMist());
 	}
 	
 	void InitWaveGenerator() {
@@ -575,7 +576,9 @@ public class Ocean : MonoBehaviour
 			float time=Time.time;
 
 			th0 = new Thread( () => { 
-				if(dynamicWaves) humidity = GetHumidity(time);
+
+				if(dynamicWaves) 
+					humidity = GetHumidity(time);
 				wind = humidity;
 				SetWaves(wind);
 				
@@ -819,7 +822,8 @@ public class Ocean : MonoBehaviour
 
 		if(fint == fr1 || !spreadAlongFrames) {
 			float time=Time.time;
-			if(dynamicWaves) humidity = GetHumidity(time);
+			if(dynamicWaves) 
+				humidity = GetHumidity(time);
 			wind = humidity;
 			SetWaves(wind);
 
@@ -942,7 +946,7 @@ public class Ocean : MonoBehaviour
 			//Vector3 playerRelPos =  player.position - transform.position;
 
 			//In reflection mode, use tangent w for foam strength
-			if (reflectionRefractionEnabled) {
+			if (reflectionRefractionEnabled && player!= null) {
 				float deltaTime = Time.deltaTime;
 				Vector3 playerPosition =  player.position;
 				Vector3 currentPosition = transform.position;
